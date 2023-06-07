@@ -11,7 +11,7 @@ export class AppHome extends LitElement {
 
   // For more information on using properties and state in lit
   // check out this link https://lit.dev/docs/components/properties/
-  @property() message = 'Welcome!';
+  @property() message = 'Xin chào!';
 
   static get styles() {
     return [
@@ -69,9 +69,9 @@ export class AppHome extends LitElement {
   share() {
     if ((navigator as any).share) {
       (navigator as any).share({
-        title: 'PWABuilder pwa-starter',
-        text: 'Check out the PWABuilder pwa-starter!',
-        url: 'https://github.com/pwa-builder/pwa-starter',
+        title: 'App pwa của Tân',
+        text: 'Đây là cái text',
+        url: 'https://carp.vn',
       });
     }
   }
@@ -88,46 +88,13 @@ export class AppHome extends LitElement {
             </div>
 
             <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <a href="https://docs.pwabuilder.com/#/starter/quick-start">
-                documentation</a>.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa vitae tortor condimentum lacinia quis vel eros donec ac. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Tortor posuere ac ut consequat semper viverra nam libero justo. Elit pellentesque habitant morbi tristique. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Eu turpis egestas pretium aenean. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Nam aliquam sem et tortor consequat. Turpis egestas sed tempus urna et pharetra pharetra. Netus et malesuada fames ac. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Nec ultrices dui sapien eget mi. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. At consectetur lorem donec massa. Semper eget duis at tellus at urna. Enim tortor at auctor urna. Volutpat blandit aliquam etiam erat velit scelerisque in. Justo laoreet sit amet cursus sit amet dictum sit. Viverra aliquet eget sit amet tellus.
             </p>
 
-            <p id="mainInfo">
-              Welcome to the
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              pwa-starter! Be sure to head back to
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
-            </p>
 
             ${'share' in navigator
               ? html`<sl-button slot="footer" variant="primary" @click="${this.share}">Share this Starter!</sl-button>`
               : null}
-          </sl-card>
-
-          <sl-card id="infoCard">
-            <h2>Technology Used</h2>
-
-            <ul>
-              <li>
-                <a href="https://www.typescriptlang.org/">TypeScript</a>
-              </li>
-
-              <li>
-                <a href="https://lit.dev">lit</a>
-              </li>
-
-              <li>
-                <a href="https://shoelace.style/">Shoelace</a>
-              </li>
-
-              <li>
-                <a href="https://github.com/thepassle/app-tools/blob/master/router/README.md"
-                  >App Tools Router</a>
-              </li>
-            </ul>
           </sl-card>
 
           <sl-button href="${(import.meta as any).env.BASE_URL}about" variant="primary">Navigate to About</sl-button>
